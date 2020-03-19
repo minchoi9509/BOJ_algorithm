@@ -5,30 +5,35 @@ import java.util.Scanner;
 
 public class Main{
 	
-	public static int[] DP; 
+	public static int[] dp; 
 	
-	public static int topDown (int n) {
-	    if (n == 0) {
-	        DP[0] = 1;
-	    }
-	    if (n == 1) {
-	        DP[1] = 1;
-	    }
-	    if (n == 2) {
-	        DP[2] = 2;
-	    }
-	    if (n >= 3) {
-	        DP[n] = topDown(n-1) + topDown(n-2) + topDown(n-3);
-	    }
-	    return DP[n];
+	public static int cal(int n) {
+		if(n == 0 || n == 1) {
+			dp[n] = 1;
+			return 1;
+		}
+		
+		if(n == 2) {
+			dp[n] = 2;
+			return 2;
+		}
+		
+		if(dp[n] > 0) {
+			return dp[n]; 
+		}
+		
+		dp[n] = cal(n-3) + cal(n-2) + cal(n-1); 
+		return dp[n]; 
 	}
-	
     public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        DP = new int[n+1]; 
-        System.out.println(topDown(n));
-        
+        for(int i = 0; i < n; i++) {
+        	int s = sc.nextInt();
+            dp = new int[s+1]; 
+            System.out.println(cal(s));
+
+        }        
     }
 
 }
