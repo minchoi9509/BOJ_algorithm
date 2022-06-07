@@ -10,6 +10,7 @@ public class Main {
     }
 
     // 풀었는데 정답으로 인정되지 않음. 확인 필요.
+    // 정답 출력 부분에서 String str = kb.next() -> kb.nextLine()으로 변경해주니까 정답 인정되는 것 확인 되었다.
     public String solution(String str) {
         String answer = "";
         String[] arrays = str.split(" ");
