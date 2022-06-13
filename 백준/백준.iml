@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/#10818" isTestSource="false" packagePrefix="algorithm" />
+      <sourceFolder url="file://$MODULE_DIR$/#10844" isTestSource="false" packagePrefix="algorithm" />
+      <sourceFolder url="file://$MODULE_DIR$/#10991" isTestSource="false" packagePrefix="algorithm" />
+      <sourceFolder url="file://$MODULE_DIR$/#10992" isTestSource="false" packagePrefix="algorithm" />
+      <sourceFolder url="file://$MODULE_DIR$/#11057" isTestSource="false" packagePrefix="algorithm" />
+      <sourceFolder url="file://$MODULE_DIR$/#11726" isTestSource="false" packagePrefix="algorithm" />
+      <sourceFolder url="file://$MODULE_DIR$/#11727" isTestSource="false" packagePrefix="algorithm" />
+      <sourceFolder url="file://$MODULE_DIR$/#1463" isTestSource="false" packagePrefix="algorithm" />
+      <sourceFolder url="file://$MODULE_DIR$/#2193" isTestSource="false" packagePrefix="algorithm" />
+      <sourceFolder url="file://$MODULE_DIR$/#2438" isTestSource="false" packagePrefix="algorithm" />
+      <sourceFolder url="file://$MODULE_DIR$/#2439" isTestSource="false" packagePrefix="algorithm" />
+      <sourceFolder url="file://$MODULE_DIR$/#2440" isTestSource="false" packagePrefix="algorithm" />
+      <sourceFolder url="file://$MODULE_DIR$/#2441" isTestSource="false" packagePrefix="algorithm" />
+      <sourceFolder url="file://$MODULE_DIR$/#2445" isTestSource="false" packagePrefix="algorithm" />
+      <sourceFolder url="file://$MODULE_DIR$/#2446" isTestSource="false" packagePrefix="algorithm" />
+      <sourceFolder url="file://$MODULE_DIR$/#2522" isTestSource="false" packagePrefix="algorithm" />
+      <sourceFolder url="file://$MODULE_DIR$/#8393" isTestSource="false" packagePrefix="algorithm" />
+      <sourceFolder url="file://$MODULE_DIR$/#9095" isTestSource="false" packagePrefix="algorithm" />
+      <sourceFolder url="file://$MODULE_DIR$/#9465" isTestSource="false" packagePrefix="algorithm" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
