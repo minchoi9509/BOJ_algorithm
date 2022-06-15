@@ -12,17 +12,31 @@ public class Main {
         for (int i = 0; i < count; i++) {
             scores[i] = kb.nextInt();
         }
-        List<Integer> answers = main.solution(count, scores);
+
+//        List<Integer> answers = main.solution(count, scores);
+        int[] answers = main.solution2(count, scores);
         for (int answer : answers) {
             System.out.print(answer + " ");
         }
     }
 
+    public int[] solution2(int count, Integer[] scores) {
+        int[] lists = new int[count];
+        for (int i = 0; i < count; i++) {
+            int grade = 1;
+            for (int j = 0; j < count; j++) {
+                if (scores[i] < scores[j]) {
+                    grade++;
+                }
+            }
+            lists[i] = grade;
+        }
+        return lists;
+    }
+
+    // 정답 아님
     public List<Integer> solution(int count, Integer[] scores) {
         List<Integer> answers = new ArrayList<>();
-        // 아이디어가 안떠오른다.
-        // 정렬하기 .. 비효율적으로도 생각해보자.
-        // 뭔가 동점 있을 때 처리가 잘 안된 느낌.
         Integer[] temp = scores.clone();
         Arrays.sort(scores, Collections.reverseOrder());
         for (int i = 0; i < count; i++) {

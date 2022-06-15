@@ -14,10 +14,35 @@ public class Main {
                 arrays[i][j] = kb.nextInt();
             }
         }
-        System.out.println(main.solution(number, arrays));
+        System.out.println(main.solution2(number, arrays));
     }
- 
-    // 비효율.. 끝판왕
+
+    public int solution2(int number, int[][] arrays) {
+        int answer = Integer.MIN_VALUE;
+        for (int i = 0; i < number; i++) {
+            int rowSum = 0;
+            int colSum = 0;
+            for (int j = 0; j < number; j++) {
+                rowSum += arrays[i][j];
+                colSum += arrays[j][i];
+            }
+            answer = Math.max(answer, rowSum);
+            answer = Math.max(answer, colSum);
+        }
+
+        int diagonalSum = 0;
+        int reverseDiagonalSum = 0;
+        for (int i = 0; i < number; i++) {
+            diagonalSum += arrays[i][i];
+            reverseDiagonalSum += arrays[i][number - i - 1];
+        }
+
+        answer = Math.max(answer, diagonalSum);
+        answer = Math.max(answer, reverseDiagonalSum);
+
+        return answer;
+    }
+
     public int solution(int number, int[][] arrays) {
         // 행
         int rowMax = 0;
