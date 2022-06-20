@@ -19,6 +19,7 @@ public class Main {
     }
 
     public int solution(int n, int m, int[][] scores) {
+
         return 0;
     }
 }

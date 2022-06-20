@@ -8,16 +8,38 @@ public class Main {
         Main main = new Main();
         Scanner kb = new Scanner(System.in);
         int count = kb.nextInt();
-        int[][] board = new int[count + 1][count + 1];
-        for (int i = 0; i <= count; i++) {
-            for (int j = 0; j <= count; j++) {
-                if (i == 0 || j == 0) {
-                    board[i][j] = 0;
-                }
+        int[][] board = new int[count][count];
+        for (int i = 0; i < count; i++) {
+            for (int j = 0; j < count; j++) {
                 board[i][j] = kb.nextInt();
             }
         }
-        System.out.println(main.solution(count, board));
+        // System.out.println(main.solution(count, board));
+        System.out.println(main.solution2(count, board));
+    }
+
+    int[] dx = {-1, 0, 1, 0};
+    int[] dy = {0, 1, 0, -1};
+
+    public int solution2(int count, int[][] board) {
+        int answer = 0;
+        for (int i = 0; i < count; i++) {
+            for (int j = 0; j < count; j++) {
+                boolean flag = true;
+                for (int k = 0; k < 4; k++) {
+                    int nx = board[i][j] + dx[k];
+                    int ny = board[i][j] + dy[k];
+                    if (nx >= 0 && nx < count && ny >= 0 && ny < count && board[nx][ny] >= board[i][j]) {
+                        flag = false;
+                        break;
+                    }
+                }
+                if (flag) {
+                    answer++;
+                }
+            }
+        }
+        return answer;
     }
 
     // runtime error Time: 228ms Memory: 31MB -- 음?
