@@ -13,4 +13,10 @@ class MainTest {
         assertEquals(main.solution(8, 6, new int[]{1, 2, 1, 3, 1, 1, 1, 2}), 3);
     }
 
+    @Test
+    void solution2() {
+        Main main = new Main();
+        assertEquals(main.solution2(8, 6, new int[]{1, 2, 1, 3, 1, 1, 1, 2}), 3);
+    }
+
 }

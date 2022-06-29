@@ -13,7 +13,29 @@ public class Main {
         for (int i = 0; i < n; i++) {
             numbers[i] = kb.nextInt();
         }
-        System.out.println(main.solution(n, m, numbers));
+        // System.out.println(main.solution(n, m, numbers));
+        System.out.println(main.solution2(n, m, numbers));
+    }
+
+    public int solution2(int n, int m, int[] numbers) {
+        int answer = 0;
+        // 2포인트 알고리즘
+        int sum = 0;
+        int lt = 0;
+        for (int rt = 0; rt < n; rt++) {
+            sum += numbers[rt];
+            if (sum == m) {
+                answer++;
+            }
+            while(sum >= m) {
+                sum -= numbers[lt++];
+                if (sum == m) {
+                    answer++;
+                }
+            }
+        }
+
+        return answer;
     }
 
     // 시간 초과

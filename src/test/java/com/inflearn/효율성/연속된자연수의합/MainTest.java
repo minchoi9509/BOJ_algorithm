@@ -10,7 +10,7 @@ class MainTest {
     @Test
     void solution() {
         Main main = new Main();
-        assertEquals(main.solution(15), 3);
+        assertEquals(3, main.solution(15));
     }
 
 }
