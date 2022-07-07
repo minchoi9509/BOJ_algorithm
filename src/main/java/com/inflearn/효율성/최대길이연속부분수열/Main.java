@@ -17,10 +17,23 @@ public class Main {
     }
 
     public int solution(int n, int k, int[] numbers) {
+        // 연속 길이: rt - lt + 1
         int answer = 0;
-        for (int i = 0; i < n; i++) {
-
+        int count = 0;
+        int lt = 0;
+        for (int rt = 0; rt < n; rt++) {
+            if (numbers[rt] == 0) {
+                count++;
+                while (count > k) {
+                    if (numbers[lt] == 0) {
+                        count--;
+                    }
+                    lt++;
+                }
+            }
+            answer = Math.max(answer, rt - lt + 1);
         }
+
         return answer;
     }
 }
