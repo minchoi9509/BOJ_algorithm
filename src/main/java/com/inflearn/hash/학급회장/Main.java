@@ -1,4 +1,4 @@
-package com.inflearn.hash;
+package com.inflearn.hash.학급회장;
 
 import java.util.HashMap;
 import java.util.Scanner;
