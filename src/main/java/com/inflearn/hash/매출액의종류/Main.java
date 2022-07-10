@@ -22,17 +22,17 @@ public class Main {
         }
     }
 
+    // 시간 초과
     public ArrayList<Integer> solution(int n, int k, int[] numbers) {
         ArrayList<Integer> answers = new ArrayList<>();
-        Set<Integer> set = new HashSet<>();
-        for (int i = 0; i + k < n; i++) {
-            for (int j = i; j < i + k; j++) {
-                set.add(numbers[j]);
-                if ((j + 1) % k == 0) {
-                    answers.add(set.size());
-                    set = new HashSet<>();
-                }
+        int lt = 0;
+        while (lt + k <= n) {
+            Set<Integer> set = new HashSet<>();
+            for (int i = lt; i < lt + k; i++) {
+                set.add(numbers[i]);
             }
+            answers.add(set.size());
+            lt++;
         }
         return answers;
     }
