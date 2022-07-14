@@ -1,7 +1,5 @@
 package com.inflearn.stackQueue.크레인인형뽑기;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -27,18 +25,22 @@ public class Main {
 
     public int solution(int n, int[][] board, int m, int[] moves) {
         int answer = 0;
-        ArrayList<Stack<Integer>> stacks = new ArrayList<>();
-        for (int i = 0; i < n; i++) {
-            Stack<Integer> stack = new Stack<>();
-            for (int j = n - 1; j <= 0; j--) {
-                stack.push(board[i][j]);
+        Stack<Integer> stack = new Stack<>();
+        for (int position : moves) {
+            for (int i = 0; i < board.length; i++) {
+                if (board[i][position - 1] != 0) {
+                    int tmp = board[i][position - 1];
+                    board[i][position - 1] = 0;
+                    if (!stack.isEmpty() && tmp == stack.peek()) {
+                        answer += 2;
+                        stack.pop();
+                    }
+                    else {
+                        stack.push(tmp);
+                    }
+                    break;
+                }
             }
-            stacks.add(stack);
-        }
-
-        for (int i = 0; i < m; i++) {
-            Stack<Integer> stack = stacks.get(moves[i] - 1);
-
         }
         return answer;
     }
