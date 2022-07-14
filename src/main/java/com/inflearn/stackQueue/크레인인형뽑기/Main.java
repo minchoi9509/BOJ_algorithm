@@ -17,7 +17,7 @@ public class Main {
         }
         int m = kb.nextInt();
         int[] moves = new int[m];
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < m; i++) {
             moves[i] = kb.nextInt();
         }
         System.out.println(main.solution(n, board, m, moves));
