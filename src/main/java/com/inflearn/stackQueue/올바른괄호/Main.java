@@ -14,8 +14,28 @@ public class Main {
         System.out.println(main.solution(str));
     }
 
-    // 런타임 에러. equals 확인하는 부분 마음에 안들음.
     public String solution(String str) {
+        String answer = YES;
+        Stack<Character> stack = new Stack<>();
+        for (char x : str.toCharArray()) {
+            if (x == '(') {
+                stack.push(x);
+            } else {
+                if (stack.isEmpty()) {
+                    return NO;
+                }
+                stack.pop();
+            }
+        }
+
+        if (!stack.isEmpty()) {
+            return NO;
+        }
+        return answer;
+    }
+
+    // 런타임 에러. equals 확인하는 부분 마음에 안들음.
+    public String solution2(String str) {
         String answer = YES;
         Stack<Character> characters = new Stack<>();
         for (Character c : str.toCharArray()) {

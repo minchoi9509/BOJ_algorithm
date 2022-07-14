@@ -13,14 +13,27 @@ public class Main {
     }
 
     public String solution(String str) {
+        String answer = "";
+        Stack<Character> stack = new Stack<>();
+        for (char x : str.toCharArray()) {
+            if (x == ')') {
+                while (stack.pop() != '(');
+            } else {
+                stack.push(x);
+            }
+        }
+        return null;
+    }
+
+    public String solution2(String str) {
         StringBuffer sb = new StringBuffer();
         Stack<Character> characters = new Stack<>();
         for (Character c : str.toCharArray()) {
-            if (!")".equals(c.toString())) {
+            if (')' == c ) {
                 characters.push(c);
             } else {
                 // 이 조건식이 너무 말도 안되게 맘에 안듬..
-                while (!"(".equals(characters.pop().toString())) {
+                while ('(' != characters.pop()) {
 
                 }
             }
