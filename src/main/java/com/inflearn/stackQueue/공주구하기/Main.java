@@ -1,6 +1,7 @@
 package com.inflearn.stackQueue.공주구하기;
 
 import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 
 public class Main {
@@ -14,15 +15,23 @@ public class Main {
     }
 
     public int solution(int n, int k) {
-        int answer = 0;
-        LinkedList<Integer> princes = new LinkedList<>();
-        for (int i = 0; i < n; i++) {
+        Queue<Integer> princes = new LinkedList<>();
+        for (int i = 1; i <= n; i++) {
             princes.add(i);
         }
 
+        int count = 1;
         while (princes.size() != 1) {
-
+            if (count % k != 0) {
+                int temp = princes.peek();
+                princes.poll();
+                princes.offer(temp);
+            }
+            else {
+                princes.poll();
+            }
+            count++;
         }
-        return 0;
+        return princes.peek();
     }
 }

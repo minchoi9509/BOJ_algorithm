@@ -12,4 +12,10 @@ class MainTest {
         Main main = new Main();
         Assertions.assertEquals(7, main.solution(8, 3));
     }
+
+    @Test
+    void solution2() {
+        Main main = new Main();
+        Assertions.assertEquals(91, main.solution(100, 3));
+    }
 }
