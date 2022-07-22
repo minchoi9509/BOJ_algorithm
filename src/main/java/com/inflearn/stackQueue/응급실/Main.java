@@ -17,7 +17,7 @@ public class Main {
     }
 
     public int solution(int n, int m, int[] lists) {
-        int answer = 0;
+        int answer = 1;
         // Queue<Person> patients = new ArrayList<>();
         Queue<Person> patients = new LinkedList<>();
         for (int i = 0; i < n; i++) {
