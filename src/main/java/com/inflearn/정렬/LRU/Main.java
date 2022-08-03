@@ -19,6 +19,7 @@ public class Main {
         }
     }
 
+    // 삽입정렬
     public int[] solution(int s, int n, int[] jobs) {
         int[] answer = new int[s];
         for (int job : jobs) {
