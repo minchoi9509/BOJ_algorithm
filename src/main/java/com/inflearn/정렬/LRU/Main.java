@@ -13,14 +13,14 @@ public class Main {
         for (int i = 0; i < s; i++) {
             jobs[i] = kb.nextInt();
         }
-        int[] answers = main.solution(s, n, jobs);
+        int[] answers = main.solution(s, jobs);
         for (int answer : answers) {
             System.out.print(answer + " ");
         }
     }
 
     // 삽입정렬
-    public int[] solution(int s, int n, int[] jobs) {
+    public int[] solution(int s, int[] jobs) {
         int[] answer = new int[s];
         for (int job : jobs) {
             int position = -1;
