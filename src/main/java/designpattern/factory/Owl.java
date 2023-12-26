@@ -1,4 +1,4 @@
-package designpattern.observer;
+package designpattern.factory;
 
 import java.util.List;
 

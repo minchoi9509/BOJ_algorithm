@@ -1,4 +1,4 @@
-package designpattern.observer;
+package designpattern.factory;
 
 public class Citizen extends Unit implements Observer {
     public Citizen(int health, AttackStrategy attackStrategy, MoveStrategy moveStrategy) {
